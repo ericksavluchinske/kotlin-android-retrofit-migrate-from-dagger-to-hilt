@@ -1,21 +1,25 @@
 package com.example.retrofitdemocleandaggertohilt.presentation.di.core
 
+import com.example.retrofitdemocleandaggertohilt.BuildConfig
 import com.example.retrofitdemocleandaggertohilt.data.api.JSONPlaceHolderService
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
-class NetModule(private val baseUrl: String) {
+@InstallIn(SingletonComponent::class)
+class NetModule {
 
     @Singleton
     @Provides
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(baseUrl)
+            .baseUrl(BuildConfig.BASE_URL)
             .build()
     }
 
