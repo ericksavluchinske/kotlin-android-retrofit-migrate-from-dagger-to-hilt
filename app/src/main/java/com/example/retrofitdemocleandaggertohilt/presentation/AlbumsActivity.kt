@@ -16,7 +16,6 @@ import com.example.retrofitdemocleandaggertohilt.databinding.ActivityAlbumsBindi
 import com.example.retrofitdemocleandaggertohilt.presentation.album.AlbumsAdapter
 import com.example.retrofitdemocleandaggertohilt.presentation.album.AlbumsViewModel
 import com.example.retrofitdemocleandaggertohilt.presentation.album.AlbumsViewModelFactory
-import com.example.retrofitdemocleandaggertohilt.presentation.di.Injector
 import javax.inject.Inject
 
 class AlbumsActivity : AppCompatActivity() {
@@ -28,8 +27,6 @@ class AlbumsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_albums)
-        (application as Injector).createAlbumSubComponent()
-            .inject(this)
         albumsViewModel = ViewModelProvider(this, factory)
             .get(AlbumsViewModel::class.java)
 
