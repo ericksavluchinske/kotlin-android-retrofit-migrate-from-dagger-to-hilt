@@ -16,8 +16,10 @@ import com.example.retrofitdemocleandaggertohilt.databinding.ActivityAlbumsBindi
 import com.example.retrofitdemocleandaggertohilt.presentation.album.AlbumsAdapter
 import com.example.retrofitdemocleandaggertohilt.presentation.album.AlbumsViewModel
 import com.example.retrofitdemocleandaggertohilt.presentation.album.AlbumsViewModelFactory
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class AlbumsActivity : AppCompatActivity() {
     @Inject
     lateinit var factory: AlbumsViewModelFactory
