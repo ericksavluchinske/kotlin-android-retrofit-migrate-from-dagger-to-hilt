@@ -7,9 +7,12 @@ import com.example.retrofitdemocleandaggertohilt.data.repository.album.datasourc
 import com.example.retrofitdemocleandaggertohilt.domain.repository.AlbumRepository
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
+@InstallIn(SingletonComponent::class)
 class RepositoryModule {
 
     @Provides
