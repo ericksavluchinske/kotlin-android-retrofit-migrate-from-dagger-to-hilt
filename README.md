@@ -1,5 +1,7 @@
 # Migrating DI from Dagger to Hilt
 
+![readme_header.png](./readme_header.png)
+
 Criei este projeto para aplicar meus conhecimentos sobre como migrar um App Android que utiliza Injeção de Dependência com Dagger para Injeção de Dependência com Hilt.
 Como ponto de partida, utilizei um App meu que usa Injeção de Dependência com Dagger (disponível no meu repositório: [kotlin-android-retrofit-coroutines-clean-mvvm-dagger-room](https://github.com/ericksavluchinske/kotlin-android-retrofit-coroutines-clean-mvvm-dagger-room)).
 O App consome uma API REST utilizando Retrofit, Kotlin Coroutines, Clean Architecture + MVVM, Dagger, Room, DataBinding, RecyclerView.
